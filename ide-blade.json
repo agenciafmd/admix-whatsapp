@@ -1,7 +1,7 @@
 {
     "namespaces": [
         {
-            "namespace": "agenciafmd/whatsapps",
+            "namespace": "agenciafmd/whatsapp",
             "path": "src/resources/views"
         }
     ]
