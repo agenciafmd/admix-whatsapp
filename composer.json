@@ -17,13 +17,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Agenciafmd\\Whatsapps\\": "src/"
+            "Agenciafmd\\Whatsapp\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Agenciafmd\\Whatsapps\\Providers\\WhatsappServiceProvider"
+                "Agenciafmd\\Whatsapp\\Providers\\WhatsappServiceProvider"
             ]
         }
     }

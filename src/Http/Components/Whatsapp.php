@@ -1,8 +1,7 @@
 <?php
 
-namespace Agenciafmd\Whatsapps\Http\Components;
+namespace Agenciafmd\Whatsapp\Http\Components;
 
-use Agenciafmd\Whatsapps\Models\Whatsapp as WhatsappModel;
 use Illuminate\View\Component;
 
 class Whatsapp extends Component
@@ -10,7 +9,7 @@ class Whatsapp extends Component
     public string $template;
 
     public function __construct(
-        string $template = 'agenciafmd/whatsapps::components.whatsapp-chat'
+        string $template = 'agenciafmd/whatsapp::components.whatsapp-chat'
     )
     {
         $this->template = $template;

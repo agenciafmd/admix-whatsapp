@@ -1,9 +1,8 @@
 <?php
 
-namespace Agenciafmd\Whatsapps\Http\Livewire;
+namespace Agenciafmd\Whatsapp\Http\Livewire;
 
 use Agenciafmd\Leads\Models\Lead;
-use Agenciafmd\Postal\Models\Postal;
 use Agenciafmd\Postal\Notifications\SendNotification;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Cookie;
@@ -24,7 +23,7 @@ class WhatsappChat extends Component
     {
         $view = [];
 
-        return view('agenciafmd/whatsapps::livewire.whatsapp-chat',$view);
+        return view('agenciafmd/whatsapp::livewire.whatsapp-chat',$view);
     }
 
     public function updated($field)

@@ -1,8 +1,7 @@
 <?php
 
-namespace Agenciafmd\Whatsapps\Providers;
+namespace Agenciafmd\Whatsapp\Providers;
 
-use Agenciafmd\Whatsapps\Providers\LivewireServiceProvider;
 use Illuminate\Support\ServiceProvider;
 
 class WhatsappServiceProvider extends ServiceProvider

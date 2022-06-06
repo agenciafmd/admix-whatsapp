@@ -1,8 +1,8 @@
 <?php
 
-namespace Agenciafmd\Whatsapps\Providers;
+namespace Agenciafmd\Whatsapp\Providers;
 
-use Agenciafmd\Whatsapps\Http\Livewire\WhatsappChat;
+use Agenciafmd\Whatsapp\Http\Livewire\WhatsappChat;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
 

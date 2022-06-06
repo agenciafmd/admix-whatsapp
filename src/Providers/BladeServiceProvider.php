@@ -1,8 +1,8 @@
 <?php
 
-namespace Agenciafmd\Whatsapps\Providers;
+namespace Agenciafmd\Whatsapp\Providers;
 
-use Agenciafmd\Whatsapps\Http\Components\Whatsapp;
+use Agenciafmd\Whatsapp\Http\Components\Whatsapp;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
 
@@ -26,7 +26,7 @@ class BladeServiceProvider extends ServiceProvider
 
     protected function loadViews()
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'agenciafmd/whatsapps');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'agenciafmd/whatsapp');
     }
 
     protected function loadTranslations()
@@ -37,7 +37,7 @@ class BladeServiceProvider extends ServiceProvider
     protected function publish()
     {
         $this->publishes([
-            __DIR__ . '/../resources/views' => base_path('resources/views/vendor/agenciafmd/whatsapps'),
+            __DIR__ . '/../resources/views' => base_path('resources/views/vendor/agenciafmd/whatsapp'),
         ], 'admix-whatsapp:views');
     }
 }
