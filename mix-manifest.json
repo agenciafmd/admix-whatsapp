@@ -1,9 +1,9 @@
 {
-    "/public/css/whatsapp-chat.css": "/public/css/whatsapp-chat.css",
-    "/public/js/whatsapp-chat.js": "/public/js/whatsapp-chat.js",
-    "/public/images/bg-whatsapp-chat-green.png": "/public/images/bg-whatsapp-chat-green.png",
-    "/public/images/bg-whatsapp-chat-white.png": "/public/images/bg-whatsapp-chat-white.png",
-    "/public/images/bg-whatsapp.jpg": "/public/images/bg-whatsapp.jpg",
-    "/public/images/img-whatsapp-consultor.png": "/public/images/img-whatsapp-consultor.png",
-    "/public/images/img-whatsapp-consultor@2x.png": "/public/images/img-whatsapp-consultor@2x.png"
+    "/src/assets/css/whatsapp-chat.css": "/src/assets/css/whatsapp-chat.css",
+    "/src/assets/js/whatsapp-chat.js": "/src/assets/js/whatsapp-chat.js",
+    "/src/assets/images/bg-whatsapp-chat-green.png": "/src/assets/images/bg-whatsapp-chat-green.png",
+    "/src/assets/images/bg-whatsapp-chat-white.png": "/src/assets/images/bg-whatsapp-chat-white.png",
+    "/src/assets/images/bg-whatsapp.jpg": "/src/assets/images/bg-whatsapp.jpg",
+    "/src/assets/images/img-whatsapp-consultor.png": "/src/assets/images/img-whatsapp-consultor.png",
+    "/src/assets/images/img-whatsapp-consultor@2x.png": "/src/assets/images/img-whatsapp-consultor@2x.png"
 }
