@@ -17,7 +17,7 @@ class WhatsappChat extends Component
 
     public $phone;
 
-    public $newsletter;
+    public $newsletter = null;
 
     public function render()
     {
@@ -47,7 +47,7 @@ class WhatsappChat extends Component
                 'min:14',
             ],
             'newsletter' => [
-                Rule::requiredIf(config('admix-whatsapp.fields.newsletter')),
+                Rule::requiredIf(config('admix-whatsapp.fields.newsletter')) ? 'accepted' : '',
             ],
         ];
     }
@@ -91,14 +91,14 @@ class WhatsappChat extends Component
 
         $this->emit('swal', [
             'level' => 'success',
-            'message' => 'Mensagem enviada com sucesso.',
+            'message' => 'Recebemos seu contato e retornaremos o quanto antes.',
         ]);
 
         $this->emit('datalayer', [
             'form_name' => 'whatsapp',
         ]);
 
-        $this->dispatchBrowserEvent('whatsapp',[ 'response' => true]);
+        $this->dispatchBrowserEvent('whatsappChatSubmitted',[ 'response' => true]);
 
         $this->reset();
     }
