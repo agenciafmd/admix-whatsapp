@@ -1,3 +1,25 @@
+function getBrowser() {
+
+  const userAgent = navigator.userAgent.toLowerCase();
+  const hasUserAgentSafariToken = userAgent.indexOf('safari') > -1;
+  const hasUserAgentChromeToken = userAgent.indexOf('chrome') > -1;
+
+  if (hasUserAgentSafariToken) {
+
+    if (hasUserAgentChromeToken) {
+
+      return 'chrome';
+    }
+
+    return 'safari';
+  }
+}
+
+function isSafari() {
+
+  return getBrowser() === 'safari';
+}
+
 function setupInputMasks() {
 
   function setMaskToAllElements(elements, maskOptions) {
