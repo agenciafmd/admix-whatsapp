@@ -31,8 +31,9 @@ class WhatsappServiceProvider extends ServiceProvider
         ], 'admix-whatsapp:config');
 
         $this->publishes([
-            __DIR__ . '/../resources/images' => public_path('images'),
-            __DIR__ . '/../resources/css' => public_path('css'),
+            __DIR__ . '/public/images' => public_path('images'),
+            __DIR__ . '/public/css' => public_path('css'),
+            __DIR__ . '/public/js' => public_path('js'),
         ], 'admix-whatsapp:assets');
     }
 
