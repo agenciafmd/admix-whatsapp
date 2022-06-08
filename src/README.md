@@ -1,9 +1,9 @@
-## F&MD - Whatsapp
+## F&MD - Whatsapp Chat
 
 [![Downloads](https://img.shields.io/packagist/dt/agenciafmd/admix-whatsapp.svg?style=flat-square)](https://packagist.org/packages/agenciafmd/admix-whatsapp)
 [![Licença](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
-- Use o Whatsapp no seu site
+- Use o chat flutuante do Whatsapp no seu site
 
 ## Instalação
 
@@ -18,12 +18,6 @@ php artisan vendor:publish --tag=admix-whatsapp:assets
 ```
 
 ## Dados no frontend
-
-Após publicar os assets, acrescente a chamada do do arquivo css no head do projeto
-
-````html
-<link rel="stylesheet" href="/css/whatsapp.css">
-````
 
 Para utilizar o whatsapp no seu projeto acrescente este componente no seu html
 
