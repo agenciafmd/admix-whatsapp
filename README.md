@@ -40,3 +40,23 @@ Para isso, publique o arquivo com o comando abaixo:
 ```bash
 php artisan vendor:publish --tag="admix-whatsapp:config"
 ```
+No arquivo de config é possivel alterar os textos da janela e o número de whatsapp
+
+```php
+    'fields' => [
+      'name' => true,
+      'email' => false,
+      'cpf' => true,
+      'phone' => true,
+      'newsletter' => true,
+    ],
+    'phonenumber' => '5599999999999',
+    'text' => 'Olá, bem-vindo(a).
+            Por favor, informe seus dados e atenderemos o mais rápido possível!',
+    'atendent' => 'Atendente 01',
+    'occupation' => 'Atendimento - F&MD',
+```
+
+Neste arquivo é possivel habilitar e desabilitar os campos conforme for necessário
+
+
