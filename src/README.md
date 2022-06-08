@@ -19,6 +19,13 @@ php artisan vendor:publish --tag=admix-whatsapp:assets
 
 ## Dados no frontend
 
+Após publicar os assets, acrescente a chamada do do arquivo css no head do projeto
+
+````html
+<link rel="stylesheet" href="/css/whatsapp-chat.css">
+````
+
+
 Para utilizar o whatsapp no seu projeto acrescente este componente no seu html
 
 ```html
