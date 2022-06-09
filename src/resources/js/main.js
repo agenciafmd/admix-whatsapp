@@ -47,28 +47,28 @@ function setupInputMasks() {
   };
 
   setMaskToAllElements(
-      document.querySelectorAll('.js-mask-phone'),
+      document.querySelectorAll('.wa-chat-mask-phone'),
       phoneMaskOptions,
   );
 
   const cpfMaskOptions = { mask: '000.000.000-00' };
 
   setMaskToAllElements(
-      document.querySelectorAll('.js-mask-cpf'),
+      document.querySelectorAll('.wa-chat-mask-cpf'),
       cpfMaskOptions,
   );
 
   const cnpjMaskOptions = { mask: '00.000.000/0000-00' };
 
   setMaskToAllElements(
-      document.querySelectorAll('.js-mask-cnpj'),
+      document.querySelectorAll('.wa-chat-mask-cnpj'),
       cnpjMaskOptions,
   );
 
   const cpfcnpjMaskOptions = { mask: [cpfMaskOptions, cnpjMaskOptions] };
 
   setMaskToAllElements(
-      document.querySelectorAll('.js-mask-cpfcnpj'),
+      document.querySelectorAll('.wa-chat-mask-cpfcnpj'),
       cpfcnpjMaskOptions,
   );
 }

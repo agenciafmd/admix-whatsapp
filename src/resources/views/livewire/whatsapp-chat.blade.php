@@ -44,7 +44,7 @@
            placeholder="Digite seu CPF"
            required
            aria-label="cpf"
-           class="whatsapp-chat-input js-mask-cpf">
+           class="whatsapp-chat-input wa-chat-mask-cpf">
     @error('cpf')
     <span class="error">
       <span class="error-text">
@@ -62,7 +62,7 @@
            placeholder="Digite seu celular/WhatsApp"
            required
            aria-label="telefone"
-           class="whatsapp-chat-input js-mask-phone">
+           class="whatsapp-chat-input wa-chat-mask-phone">
     @error('phone')
     <span class="error">
       <span class="error-text">
