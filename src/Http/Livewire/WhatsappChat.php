@@ -14,6 +14,8 @@ class WhatsappChat extends Component
     public $name;
 
     public $cpf;
+    
+    public $email;
 
     public $phone;
 
@@ -38,6 +40,10 @@ class WhatsappChat extends Component
                 Rule::requiredIf(config('admix-whatsapp.fields.name')),
                 'min:6',
             ],
+            'email' => [
+                Rule::requiredIf(config('admix-whatsapp.fields.email')),
+                'email',
+            ],
             'cpf' => [
                 Rule::requiredIf(config('admix-whatsapp.fields.cpf')),
                 'cpf',
@@ -56,6 +62,7 @@ class WhatsappChat extends Component
     {
         return [
             'name' => 'nome',
+            'email' => 'e-mail',
             'cpf' => 'cpf',
             'phone' => 'telefone',
             'newsletter' => 'ofertas e notícias',
