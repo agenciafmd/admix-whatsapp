@@ -15,7 +15,7 @@ return [
       'phone' => true,
       'newsletter' => true,
     ],
-    'phonenumber' => '+5599999999999',
+    'phonenumber' => '5599999999999',
     'text' => 'Olá, bem-vindo(a).
             Por favor, informe seus dados e atenderemos o mais rápido possível!',
     'atendent' => 'Atendente 01',
