@@ -67,4 +67,42 @@ No arquivo de config é possivel alterar os textos da janela e o número de what
 
 Neste arquivo é possivel habilitar e desabilitar os campos conforme for necessário
 
+### Customizar variáveis de CSS
+Os valores das variáveis podem ser sobrescritos normalmente nos arquivos de estilo do projeto.
+```css
+--wa-chat-dark-green: #2B6056;
+--wa-chat-green: #128C7E;
+--wa-chat-light-green: #25D366;
+--wa-chat-light: #DCF8C7;
+--wa-chat-white: #F9F9F9;
+--wa-chat-red: #DC1C2A;
 
+--wa-chat-font-family: sans-serif;
+--wa-chat-max-width: 27.5rem;
+--wa-chat-box-shadow: 0 0.5rem 1.5rem -0.25rem rgba(0, 0, 0, 0.15);
+--wa-chat-border-radius: .5rem;
+--wa-chat-z-index: 1030;
+
+--wa-chat-button-size: 3.5rem;
+--wa-chat-button-color: var(--wa-chat-light-green);
+--wa-chat-button-icon-size: 1.5rem;
+--wa-chat-button-distance-x: 1rem;
+--wa-chat-button-distance-y: 1rem;
+
+--wa-chat-window-margin-bottom: calc(var(--wa-chat-button-size) + var(--wa-chat-button-distance-y) + 1rem);
+
+--wa-chat-header-padding-x: 1.25rem;
+--wa-chat-header-padding-y: 0.625rem;
+--wa-chat-header-padding: var(--wa-chat-header-padding-y) var(--wa-chat-header-padding-x);
+--wa-chat-contact-img-size: 2.5rem;
+--wa-chat-close-size: 1.75rem;
+
+--wa-chat-body-color: #000;
+--wa-chat-body-padding-x: 1rem;
+--wa-chat-body-padding-y: 1rem;
+--wa-chat-body-padding: var(--wa-chat-body-padding-y) var(--wa-chat-body-padding-x);
+--wa-chat-placeholder-color: #757575;
+--wa-chat-placeholder-color-hover: #414141;
+
+--wa-chat-btn-border-radius: .25rem;
+```
