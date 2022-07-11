@@ -41,7 +41,7 @@ Após publicar os assets, acrescente as chamadas de:
  
 ## Customização
 
-Caso seja necessário, é possivel a configuração do pacote no arquivo `config/analytics.php` ou das `views`
+Caso seja necessário, é possivel a configuração do pacote no arquivo `config/admix-whatsapp.php` ou das `views`
 
 Para isso, publique o arquivo com o comando abaixo:
 
