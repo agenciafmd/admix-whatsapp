@@ -1,6 +1,10 @@
 <div class="whatsapp-chat">
   <input type="checkbox" id="whatsapp-chat-is-open" class="whatsapp-chat-is-open">
   
+  <label for="whatsapp-chat-is-open"
+         title="Fechar o chat do WhatsApp"
+         class="whatsapp-chat-backdrop"></label>
+  
   <div class="whatsapp-chat-window">
     <div class="whatsapp-chat-header">
       <picture>

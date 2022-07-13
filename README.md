@@ -78,31 +78,51 @@ Os valores das variáveis podem ser sobrescritos normalmente nos arquivos de est
 --wa-chat-red: #DC1C2A;
 
 --wa-chat-font-family: sans-serif;
---wa-chat-max-width: 27.5rem;
+--wa-chat-width: 24rem;
 --wa-chat-box-shadow: 0 0.5rem 1.5rem -0.25rem rgba(0, 0, 0, 0.15);
 --wa-chat-border-radius: .5rem;
---wa-chat-z-index: 1030;
+--wa-chat-z-index: 1055;
+--wa-chat-backdrop-color: rgba(0, 0, 0, .75);
+--wa-chat-distance-y: 1rem;
+--wa-chat-distance-x: 1rem;
+--wa-chat-right: var(--wa-chat-distance-x);
 
 --wa-chat-button-size: 3.5rem;
+--wa-chat-button-border-radius: 50%;
 --wa-chat-button-color: var(--wa-chat-light-green);
 --wa-chat-button-icon-size: 1.5rem;
---wa-chat-button-distance-x: 1rem;
---wa-chat-button-distance-y: 1rem;
 
---wa-chat-window-margin-bottom: calc(var(--wa-chat-button-size) + var(--wa-chat-button-distance-y) + 1rem);
+--wa-chat-window-margin-bottom: calc(var(--wa-chat-button-size) + var(--wa-chat-distance-y) + 1rem);
 
---wa-chat-header-padding-x: 1.25rem;
---wa-chat-header-padding-y: 0.625rem;
---wa-chat-header-padding: var(--wa-chat-header-padding-y) var(--wa-chat-header-padding-x);
+--wa-chat-header-padding: 0.625rem 1.25rem;
 --wa-chat-contact-img-size: 2.5rem;
 --wa-chat-close-size: 1.75rem;
 
 --wa-chat-body-color: #000;
---wa-chat-body-padding-x: 1rem;
---wa-chat-body-padding-y: 1rem;
---wa-chat-body-padding: var(--wa-chat-body-padding-y) var(--wa-chat-body-padding-x);
+--wa-chat-body-padding: 1rem 1rem 1.5rem 1rem;
 --wa-chat-placeholder-color: #757575;
 --wa-chat-placeholder-color-hover: #414141;
+--wa-chat-form-btn-border-radius: .25rem;
 
---wa-chat-btn-border-radius: .25rem;
+--wa-chat-error-text-right: auto;
+--wa-chat-error-text-left: 0;
+--wa-chat-error-text-bottom: 100%;
+--wa-chat-error-text-margin: 0 0 0.25rem 0;
+--wa-chat-error-text-transform-origin: left;
+
+--wa-chat-left: auto;
+--wa-chat-error-text-alt-right: 100%;
+--wa-chat-error-text-alt-left: auto;
+--wa-chat-error-text-alt-bottom: auto;
+--wa-chat-error-text-alt-margin: 0 0.5rem 0 0;
+--wa-chat-error-text-alt-transform-origin: right;
+```
+Para fazer o botão e a janela ficarem do lado esquerdo da tela, sobrescreva as variáveis com os seguintes valores:
+```css
+--wa-chat-left: var(--wa-chat-distance-x);
+--wa-chat-error-text-alt-right: var(--wa-chat-error-text-right);
+--wa-chat-error-text-alt-left: var(--wa-chat-error-text-left);
+--wa-chat-error-text-alt-bottom: var(--wa-chat-error-text-bottom);
+--wa-chat-error-text-alt-margin: var(--wa-chat-error-text-margin);
+--wa-chat-error-text-alt-transform-origin: var(--wa-chat-error-text-transform-origin);
 ```
