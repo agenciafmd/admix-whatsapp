@@ -14,7 +14,7 @@ class WhatsappChat extends Component
     public $name;
 
     public $cpf;
-    
+
     public $email;
 
     public $phone;
@@ -35,27 +35,43 @@ class WhatsappChat extends Component
 
     public function rules()
     {
-        return [
-            'name' => [
-                Rule::requiredIf(config('admix-whatsapp.fields.name')),
+        $rules = [];
+
+        if (config('admix-whatsapp.fields.name')) {
+            $rules['name'] = [
+                'required',
                 'min:6',
-            ],
-            'email' => [
-                Rule::requiredIf(config('admix-whatsapp.fields.email')),
+            ];
+        }
+
+        if (config('admix-whatsapp.fields.email')) {
+            $rules['email'] = [
+                'required',
                 'email',
-            ],
-            'cpf' => [
-                Rule::requiredIf(config('admix-whatsapp.fields.cpf')),
+            ];
+        }
+
+        if (config('admix-whatsapp.fields.cpf')) {
+            $rules['cpf'] = [
+                'required',
                 'cpf',
-            ],
-            'phone' => [
-                Rule::requiredIf(config('admix-whatsapp.fields.phone')),
+            ];
+        }
+
+        if (config('admix-whatsapp.fields.phone')) {
+            $rules['phone'] = [
+                'required',
                 'min:14',
-            ],
-            'newsletter' => [
-                Rule::requiredIf(config('admix-whatsapp.fields.newsletter')) ? 'accepted' : '',
-            ],
-        ];
+            ];
+        }
+
+        if (config('admix-whatsapp.fields.newsletter')) {
+            $rules['newsletter'] = [
+                'accepted',
+            ];
+        }
+
+        return $rules;
     }
 
     public function attributes()
@@ -73,7 +89,7 @@ class WhatsappChat extends Component
     {
         $data = $this->validate($this->rules(), [], $this->attributes());
 
-        $data['newsletter'] = ($data['newsletter']) ? 'Sim' : 'Não';
+        $data['newsletter'] = (array_key_exists('newsletter', $data)) ? 'Sim' : 'Não';
 
         $name = (array_key_exists('name', $data)) ? $data['name'] : null;
         $email = (array_key_exists('email', $data)) ? $data['email'] : null;
