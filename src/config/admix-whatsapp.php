@@ -10,8 +10,8 @@ return [
     ],
     'fields' => [
       'name' => true,
-      'email' => false,
-      'cpf' => true,
+      'email' => true,
+      'cpf' => false,
       'phone' => true,
       'newsletter' => true,
     ],
