@@ -23,7 +23,7 @@
   <label for="whatsapp-email" class="whatsapp-chat-green-bubble">
     <input wire:model.lazy="email" type="text"
            id="whatsapp-email"
-           placeholder="Digite seu Email"
+           placeholder="Digite seu e-mail"
            required
            aria-label="email"
            class="whatsapp-chat-input" >
