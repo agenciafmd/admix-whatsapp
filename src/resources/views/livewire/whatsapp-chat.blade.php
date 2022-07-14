@@ -79,10 +79,9 @@
            type="checkbox"
            id="whatsapp-newsletter" >
     <label class="whatsapp-chat-green-bubble" for="whatsapp-newsletter">
-      <input type="text"
-             placeholder="Eu aceito receber ofertas e notícias"
-             class="whatsapp-chat-input"
-             readonly>
+      <span class="whatsapp-chat-input">
+        Eu aceito receber ofertas e notícias
+      </span>
       @error('newsletter')
       <span class="error">
             <span class="error-text">
