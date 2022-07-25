@@ -1,5 +1,4 @@
 <form wire:submit.prevent="submit"
-      class="needs-validation"
       novalidate>
   @if(config('admix-whatsapp.fields.name'))
   <label for="whatsapp-name" class="whatsapp-chat-green-bubble">
