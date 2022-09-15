@@ -58,11 +58,27 @@ No arquivo de config é possivel alterar os textos da janela e o número de what
       'phone' => true,
       'newsletter' => true,
     ],
-    'phonenumber' => '5599999999999',
-    'text' => 'Olá, bem-vindo(a).
-            Por favor, informe seus dados e atenderemos o mais rápido possível!',
-    'atendent' => 'Atendente 01',
-    'occupation' => 'Atendimento - F&MD',
+     'pt_BR' => [
+        'phonenumber' => '5599999999999',
+        'text' => 'Olá, bem-vindo(a).
+                Por favor, informe seus dados e atenderemos o mais rápido possível!',
+        'atendent' => 'Atendente 01',
+        'occupation' => 'Atendimento - F&MD',
+    ],
+    'es_ES' => [
+        'phonenumber' => '5599999999999',
+        'text' => 'Hola bienvenido.
+                ¡Déjanos tus datos y te responderemos lo antes posible!',
+        'atendent' => 'Asistente 01',
+        'occupation' => 'Asistencia - F&MD',
+    ],
+    'en_US' => [
+        'phonenumber' => '5599999999999',
+        'text' => 'Hello, welcome.
+                Please provide your details and we will respond as soon as possible!',
+        'atendent' => 'Attendant 01',
+        'occupation' => 'Attendance - F&MD',
+    ]
 ```
 
 Neste arquivo é possivel habilitar e desabilitar os campos conforme for necessário
