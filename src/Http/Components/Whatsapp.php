@@ -8,17 +8,27 @@ class Whatsapp extends Component
 {
     public string $template;
 
+    public string $locale;
+
     public function __construct(
         string $template = 'agenciafmd/whatsapp::components.whatsapp-chat'
     )
     {
+        $locales = [
+            'pt' => 'pt_BR',
+            'en' => 'en_US',
+            'es' => 'es_ES',
+        ];
+
+        $segment = (request()->segment(1)) ?: 'pt';
+
+        $this->locale = $locales[$segment];
+
         $this->template = $template;
     }
 
     public function render()
     {
-       $view = [];
-
-        return view($this->template, $view);
+       return view($this->template);
     }
 }
