@@ -64,6 +64,9 @@ No arquivo de config é possivel alterar os textos da janela e o número de what
                 Por favor, informe seus dados e atenderemos o mais rápido possível!',
         'atendent' => 'Atendente 01',
         'occupation' => 'Atendimento - F&MD',
+        'generic' => false,
+        'generic_name_field' => 'Campo Generico',
+        'generic_placeholder_field' => 'Campo Generico',
     ],
     'es_ES' => [
         'phonenumber' => '5599999999999',
@@ -71,6 +74,9 @@ No arquivo de config é possivel alterar os textos da janela e o número de what
                 ¡Déjanos tus datos y te responderemos lo antes posible!',
         'atendent' => 'Asistente 01',
         'occupation' => 'Asistencia - F&MD',
+        'generic' => false,
+        'generic_name_field' => 'Campo Generico',
+        'generic_placeholder_field' => 'Campo Generico',
     ],
     'en_US' => [
         'phonenumber' => '5599999999999',
@@ -78,11 +84,25 @@ No arquivo de config é possivel alterar os textos da janela e o número de what
                 Please provide your details and we will respond as soon as possible!',
         'atendent' => 'Attendant 01',
         'occupation' => 'Attendance - F&MD',
+        'generic' => false,
+        'generic_name_field' => 'Campo Generico',
+        'generic_placeholder_field' => 'Campo Generico',
     ]
 ```
 
 Neste arquivo é possivel habilitar e desabilitar os campos conforme for necessário
 
+### Campo genérico para projetos multilingua
+
+Caso tenha a necessidade de acrescentar um campo no formulário de whatsapp basta habilitar o campo 'generic' na lingua requerida e trocar o nome e placeholder do campo generico nos seguintes campos
+```
+'es_ES' => [
+    ...
+    'generic' => false,
+    'generic_name_field' => 'Campo Generico',
+    'generic_placeholder_field' => 'Campo Generico',
+    ],
+```
 ### Customizar variáveis de CSS
 Os valores das variáveis podem ser sobrescritos normalmente nos arquivos de estilo do projeto.
 ```css

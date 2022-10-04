@@ -21,6 +21,9 @@ return [
                 Por favor, informe seus dados e atenderemos o mais rápido possível!',
         'atendent' => 'Atendente 01',
         'occupation' => 'Atendimento - F&MD',
+        'generic' => false,
+        'generic_name_field' => 'Campo Genérico',
+        'generic_placeholder_field' => 'Campo Genérico',
     ],
     'es_ES' => [
         'phonenumber' => '5599999999999',
@@ -28,6 +31,9 @@ return [
                 ¡Déjanos tus datos y te responderemos lo antes posible!',
         'atendent' => 'Asistente 01',
         'occupation' => 'Asistencia - F&MD',
+        'generic' => false,
+        'generic_name_field' => 'Campo Genérico',
+        'generic_placeholder_field' => 'Campo Genérico',
     ],
     'en_US' => [
         'phonenumber' => '5599999999999',
@@ -35,5 +41,8 @@ return [
                 Please provide your details and we will respond as soon as possible!',
         'atendent' => 'Attendant 01',
         'occupation' => 'Attendance - F&MD',
+        'generic' => false,
+        'generic_name_field' => 'Campo Genérico',
+        'generic_placeholder_field' => 'Campo Genérico',
     ]
 ];

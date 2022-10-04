@@ -19,7 +19,16 @@ class WhatsappChat extends Component
 
     public $phone;
 
+    public $generic;
+
+    public $pageLocale;
+
     public $newsletter = null;
+
+    public function mount(string $pageLocale)
+    {
+        $this->pageLocale = $pageLocale;
+    }
 
     public function render()
     {
@@ -71,6 +80,12 @@ class WhatsappChat extends Component
             ];
         }
 
+        if (config('admix-whatsapp.'.$this->pageLocale.'.generic')) {
+            $rules['generic'] = [
+                'required',
+            ];
+        }
+
         return $rules;
     }
 
@@ -81,6 +96,7 @@ class WhatsappChat extends Component
             'email' => 'e-mail',
             'cpf' => 'cpf',
             'phone' => 'telefone',
+            'generic' => 'campo',
             'newsletter' => 'ofertas e notícias',
         ];
     }
@@ -95,13 +111,17 @@ class WhatsappChat extends Component
         $email = (array_key_exists('email', $data)) ? $data['email'] : null;
         $phone = (array_key_exists('phone', $data)) ? $data['phone'] : null;
         $cpf = (array_key_exists('cpf', $data)) ? $data['cpf'] : null;
+        $generic = (array_key_exists('generic', $data)) ? $data['generic'] : null;
+        $description = (config('admix-whatsapp.'.$this->pageLocale.'.generic')) ? config('admix-whatsapp.'.$this->pageLocale.'.generic_name_field').': ' . $generic. "\n" : "";
+
 
         Lead::create([
             'source' => "whatsapp",
             'name' => $name,
             'email' => $email,
             'phone' => $phone,
-            'description' => 'CPF: ' . $cpf .
+            'description' => $description .
+                "CPF: " . $cpf .
                 "\nReceber ofertas e notícias: " . $data['newsletter'] .
                 "\nutm_campaign: " . Cookie::get('utm_campaign', '') .
                 "\nutm_content: " . Cookie::get('utm_content', '') .
@@ -114,7 +134,7 @@ class WhatsappChat extends Component
 
         $this->emit('swal', [
             'level' => 'success',
-            'message' => 'Recebemos seu contato e retornaremos o quanto antes.',
+            'message' => __('Recebemos seu contato e retornaremos o quanto antes.'),
         ]);
 
         $this->emit('datalayer', [

@@ -43,7 +43,7 @@
       <p class="whatsapp-chat-bubble">
         {{ config('admix-whatsapp.'.$locale.'.text') }}
       </p>
-      @livewire('frontend::whatsapp-chat',['url' => [ 'routeName' => request()->route()->getName(), 'routeUrl' => request()->path()]])
+      @livewire('frontend::whatsapp-chat',['pageLocale' => $locale])
     </div>
   </div>
   
