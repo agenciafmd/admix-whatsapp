@@ -143,6 +143,6 @@ class WhatsappChat extends Component
 
         $this->dispatchBrowserEvent('whatsappChatSubmitted',[ 'response' => true]);
 
-        $this->reset();
+        $this->resetExcept('pageLocale');
     }
 }
