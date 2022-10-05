@@ -20,7 +20,7 @@ class Whatsapp extends Component
             'es' => 'es_ES',
         ];
 
-        $segment = (request()->segment(1)) ?: 'pt';
+        $segment = (array_key_exists(request()->segment(1))) ?: 'pt';
 
         $this->locale = $locales[$segment];
 
