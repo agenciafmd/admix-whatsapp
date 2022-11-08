@@ -10,8 +10,14 @@ class Whatsapp extends Component
 
     public string $locale;
 
+    public string $message = '';
+
+    public string $pageName = '';
+
+    public string $pageUrl = '';
+
     public function __construct(
-        string $template = 'agenciafmd/whatsapp::components.whatsapp-chat'
+        string $template = 'agenciafmd/whatsapp::components.whatsapp-chat', string $message = 'Gostaria de obter mais informações.', string $pageName = '', string $pageUrl = ''
     )
     {
         $locales = [
@@ -25,6 +31,12 @@ class Whatsapp extends Component
         $this->locale = $locales[$segment];
 
         $this->template = $template;
+
+        $this->message = $message;
+
+        $this->pageName = $pageName;
+
+        $this->pageUrl = $pageUrl;
     }
 
     public function render()

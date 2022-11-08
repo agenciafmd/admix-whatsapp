@@ -43,7 +43,7 @@
       <p class="whatsapp-chat-bubble">
         {{ config('admix-whatsapp.'.$locale.'.text') }}
       </p>
-      @livewire('frontend::whatsapp-chat',['pageLocale' => $locale])
+      @livewire('frontend::whatsapp-chat',['pageLocale' => $locale, 'message' => $message,'pageName' => $pageName, 'pageUrl' => $pageUrl])
     </div>
   </div>
   
@@ -56,7 +56,15 @@
     </svg>
   </label>
   
-  <a href="https://api.whatsapp.com/send?phone={{config('admix-whatsapp.'.$locale.'.phonenumber')}}"
+  <a href="https://api.whatsapp.com/send?phone={{config('admix-whatsapp.'.$locale.'.phonenumber')}}{{ ($message) ? '&text='.$message : '' }}"
      target="_blank"
      class="whatsapp-chat-link"></a>
 </div>
+
+@push('scripts')
+  <script>
+    window.livewire.on('whatsappUrl', (param) => {
+      $('.whatsapp-chat-link').attr('href',param.url);
+    });
+  </script>
+@endpush

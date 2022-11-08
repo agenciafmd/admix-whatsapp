@@ -23,11 +23,20 @@ class WhatsappChat extends Component
 
     public $pageLocale;
 
+    public $pageName = null;
+
+    public $pageUrl = null;
+
+    public $message = null;
+
     public $newsletter = null;
 
-    public function mount(string $pageLocale)
+    public function mount(string $pageLocale, string $message, string $pageName, string $pageUrl)
     {
         $this->pageLocale = $pageLocale;
+        $this->message = $message;
+        $this->pageName = $pageName;
+        $this->pageUrl = $pageUrl;
     }
 
     public function render()
@@ -129,7 +138,9 @@ class WhatsappChat extends Component
                 "\nutm_source: " . Cookie::get('utm_source', '') .
                 "\nutm_term: " . Cookie::get('utm_term', '') .
                 "\ngclid: " . Cookie::get('gclid', '') .
-                "\ncid: " . Cookie::get('cid', ''),
+                "\ncid: " . Cookie::get('cid', '') .
+                "\npagina: " . $this->pageUrl .
+                "\norigem: " . $this->pageName,
         ]);
 
         $this->emit('swal', [
@@ -139,6 +150,12 @@ class WhatsappChat extends Component
 
         $this->emit('datalayer', [
             'form_name' => 'whatsapp',
+        ]);
+
+        $whatsappMessage = ($this->message) ? 'Olá! Me chamo '.$data["name"] .'. '. $this->message : 'Olá! Me chamo '.$data["name"]. '. Gostaria de obter mais informações.';
+
+        $this->emit('whatsappUrl', [
+            'url' => 'https://api.whatsapp.com/send?phone='.config('admix-whatsapp.'.$this->pageLocale.'.phonenumber').'&text='.$whatsappMessage,
         ]);
 
         $this->dispatchBrowserEvent('whatsappChatSubmitted',[ 'response' => true]);

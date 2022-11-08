@@ -48,7 +48,7 @@ Para isso, publique o arquivo com o comando abaixo:
 ```bash
 php artisan vendor:publish --tag="admix-whatsapp:config"
 ```
-No arquivo de config é possivel alterar os textos da janela e o número de whatsapp
+No arquivo de config é possivel alterar os textos da janela e o número de whatsapp.
 
 ```php
     'fields' => [
@@ -91,6 +91,17 @@ No arquivo de config é possivel alterar os textos da janela e o número de what
 ```
 
 Neste arquivo é possivel habilitar e desabilitar os campos conforme for necessário
+
+### Customização de mensagem inicial do whatsapp após o preenchimento do formulário
+
+Caso seja necessário utilizar uma mensagem mais personalizada em determinadas páginas podemos tirar a chamada do componente da master.blade.php e colocar a chamada em cada página do projeto
+
+```html
+<x-whatsapp message="Gostaria de obter mais informações sobre ..."></x-whatsapp>
+```
+E ficará assim "Olá! Meu nome é 'Nome'. [Mensagem Customizada]"
+
+A mensagem inicial padrão que vai no whatsapp é "Olá! Meu nome é 'Nome'. Gostaria de obter mais informações."
 
 ### Campo genérico para projetos multilingua
 
