@@ -143,10 +143,12 @@ class WhatsappChat extends Component
                 "\norigem: " . $this->pageName,
         ]);
 
-        $this->emit('swal', [
-            'level' => 'success',
-            'message' => __('Recebemos seu contato e retornaremos o quanto antes.'),
-        ]);
+        if(config('admix-whatsapp.sweetalert')) {
+            $this->emit('swal', [
+                'level' => 'success',
+                'message' => __('Recebemos seu contato e retornaremos o quanto antes.'),
+            ]);
+        }
 
         $this->emit('datalayer', [
             'form_name' => 'whatsapp',

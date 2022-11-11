@@ -14,6 +14,7 @@ return [
       'cpf' => false,
       'phone' => true,
       'newsletter' => true,
+      'sweetalert' => true,
     ],
     'pt_BR' => [
         'phonenumber' => '5599999999999',
