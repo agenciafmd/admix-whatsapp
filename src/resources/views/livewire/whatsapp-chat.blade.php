@@ -56,7 +56,7 @@
   @endif
   @if(config('admix-whatsapp.'.$pageLocale.'.generic'))
     <label for="whatsapp-phone" class="whatsapp-chat-green-bubble">
-      <input wire:model.lazy="generic" type="tel"
+      <input wire:model.lazy="generic" type="text"
              id="whatsapp-generic"
              placeholder="{{ config('admix-whatsapp.'.$pageLocale.'.generic_placeholder_field') }}"
              required

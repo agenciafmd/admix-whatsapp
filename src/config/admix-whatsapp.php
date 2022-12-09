@@ -15,6 +15,7 @@ return [
       'phone' => true,
       'newsletter' => true,
       'sweetalert' => true,
+      'custom_datalayer' => true,
     ],
     'pt_BR' => [
         'phonenumber' => '5599999999999',

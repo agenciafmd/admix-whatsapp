@@ -143,16 +143,29 @@ class WhatsappChat extends Component
                 "\norigem: " . $this->pageName,
         ]);
 
-        if(config('admix-whatsapp.sweetalert')) {
+        if(config('admix-whatsapp.fields.sweetalert')) {
             $this->emit('swal', [
                 'level' => 'success',
                 'message' => __('Recebemos seu contato e retornaremos o quanto antes.'),
             ]);
         }
 
-        $this->emit('datalayer', [
-            'form_name' => 'whatsapp',
-        ]);
+        if(config('admix-whatsapp.fields.custom_datalayer')){
+            $this->emit('datalayerWhatsapp', [
+                'form_name' => 'whatsapp',
+                'event' => 'lead_whatsapp',
+                'name' => $name,
+                'email' => $email,
+                'telefone' => $phone,
+                'modelo_veiculo' => $this->pageName,
+            ]);
+        }
+
+        if(!config('admix-whatsapp.fields.custom_datalayer')) {
+            $this->emit('datalayer', [
+                'form_name' => 'whatsapp',
+            ]);
+        }
 
         $whatsappMessage = ($this->message) ? 'Olá! Me chamo '.$data["name"] .'. '. $this->message : 'Olá! Me chamo '.$data["name"]. '. Gostaria de obter mais informações.';
 
